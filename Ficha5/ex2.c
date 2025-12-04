@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+
+int main(int argc, char* argv[]) {
+    printf("Processo inicial: %d\n",getpid());
+    for (int i = 0; i < 4; i++){
+        fork();
+        printf("Fork %d:%d\n",i+1,getpid());
+    }
+    while (wait(NULL) > 0);
+    exit(EXIT_SUCCESS);
+}
