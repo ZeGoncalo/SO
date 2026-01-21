@@ -4,6 +4,9 @@
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
+
+#define MAX_ARGS 64
+
 int main(int argc, char* argv[]) {
     for( ; ; ) {
         /* give prompt, read command and null terminate it */

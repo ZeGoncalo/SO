@@ -1,0 +1,5 @@
+ls
+ls -l
+pwd
+echo ola
+myhistory4
